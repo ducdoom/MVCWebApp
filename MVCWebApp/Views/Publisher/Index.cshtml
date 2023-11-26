@@ -1,0 +1,48 @@
+﻿@model PublisherViewModel
+@{
+}
+
+<table class="table table-bordered table-striped table-responsive">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Số lượt view</th>
+            <th scope="col">Số lượt submit form</th>
+            <th scope="col">Số order đã thanh toán</th>
+            <th scope="col">Số chiến dịch đã tham gia</th>
+            <th scope="col">Hoa hồng phát sinh</th>
+            <th scope="col">Hoa hồng hợp lệ</th>
+            <th scope="col">Hoa hồng bị giữ</th>
+            <th scope="col">Hoa hồng bị huỷ</th>
+            <th scope="col">Hoa hồng đã chi trả</th>
+            <th scope="col">Hoa hồng còn được chi trả</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int count = 1;
+        }
+        @foreach (var item in Model.UserDashboards)
+        {
+            <tr>
+                <th scope="row">@count</th>
+                <td>@item.Email</td>
+                <td>@item.Password</td>
+                <td>@item.Dashboard.ViewNum.Value</td>
+                <td>@item.Dashboard.SubmitFormNum.Value</td>
+                <td>@item.Dashboard.PaidOrderNum.Value</td>
+                <td>@item.Dashboard.JoinedCampaign.Value</td>
+                <td>@item.Dashboard.Commission.Value</td>
+                <td>@item.Dashboard.ValidCommission.Value</td>
+                <td>@item.Dashboard.HoldCommission.Value</td>
+                <td>@item.Dashboard.CancelCommission.Value</td>
+                <td>@item.Dashboard.PaidCommission.Value</td>
+                <td>@item.Dashboard.RemainingPaidCommission.Value</td>
+
+            </tr>
+            count++;
+        }
+    </tbody>
+</table>
