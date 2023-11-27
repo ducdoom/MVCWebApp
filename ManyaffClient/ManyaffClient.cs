@@ -48,12 +48,8 @@ namespace ManyaffClient
 
             string contentString = await response.Content.ReadAsStringAsync();
 
-            var options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
 
-            DashboardReponse dashboardReponse = JsonSerializer.Deserialize<DashboardReponse>(contentString, options);
+            DashboardReponse dashboardReponse = JsonSerializer.Deserialize<DashboardReponse>(contentString);
 
             if (dashboardReponse.Success)
             {

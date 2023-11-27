@@ -17,9 +17,9 @@ namespace ManyaffClient.Responses
     public class DataCard
     {
         [JsonPropertyName("label")]
-        public string Label = string.Empty;
+        public string Label { get; set; } = string.Empty;
 
         [JsonPropertyName("value")]
-        public int Value = 0;
+        public double Value { get; set; } = 0;
     }
 }

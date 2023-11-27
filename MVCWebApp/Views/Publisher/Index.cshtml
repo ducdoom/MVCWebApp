@@ -7,7 +7,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Email</th>
-            <th scope="col">Password</th>
+            @* <th scope="col">Password</th> *@
             <th scope="col">Số lượt view</th>
             <th scope="col">Số lượt submit form</th>
             <th scope="col">Số order đã thanh toán</th>
@@ -29,17 +29,17 @@
             <tr>
                 <th scope="row">@count</th>
                 <td>@item.Email</td>
-                <td>@item.Password</td>
+                @* <td>@item.Password</td> *@
                 <td>@item.Dashboard.ViewNum.Value</td>
                 <td>@item.Dashboard.SubmitFormNum.Value</td>
                 <td>@item.Dashboard.PaidOrderNum.Value</td>
                 <td>@item.Dashboard.JoinedCampaign.Value</td>
-                <td>@item.Dashboard.Commission.Value</td>
-                <td>@item.Dashboard.ValidCommission.Value</td>
-                <td>@item.Dashboard.HoldCommission.Value</td>
-                <td>@item.Dashboard.CancelCommission.Value</td>
-                <td>@item.Dashboard.PaidCommission.Value</td>
-                <td>@item.Dashboard.RemainingPaidCommission.Value</td>
+                <td>@item.Dashboard.Commission.Value.ToString("N0")</td>
+                <td>@item.Dashboard.ValidCommission.Value.ToString("N0")</td>
+                <td>@item.Dashboard.HoldCommission.Value.ToString("N0")</td>
+                <td>@item.Dashboard.CancelCommission.Value.ToString("N0")</td>
+                <td>@item.Dashboard.PaidCommission.Value.ToString("N0")</td>
+                <td>@item.Dashboard.RemainingPaidCommission.Value.ToString("N0")</td>
 
             </tr>
             count++;
