@@ -1,13 +1,15 @@
 ﻿using ManyaffClient.Responses;
 using MVCWebApp.Models.ManyAff;
+using System.Text.Json;
 
 namespace MVCWebApp.Models
 {
     public class PublisherViewModel
     {
         private readonly ManyaffClient.ManyaffClient manyaffClient = new();
+        private HttpClient httpClient = new();
 
-        public List<ManyaffClient.User> Users { get; set; }
+        public List<ManyaffClient.User> Users { get; set; } = new();
         public PublisherViewModel()
         {
             Users =
